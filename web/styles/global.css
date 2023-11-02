@@ -1,0 +1,32 @@
+:root {
+  --colorWhite: #fff;
+  --backgroundBody: #e31ee6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--backgroundBody);
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--colorWhite);
+}

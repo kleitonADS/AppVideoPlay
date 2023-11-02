@@ -1,13 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="icon" type="image/svg+xml" href="/JustPlayIcon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Play App</title>
+    <title>Video Play App / Just Play DJ</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <nav>
+          <h1>Just play</h1>
+          <div class="menu-icon" onclick="toogleMenu()">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+          </div>
+        </nav>
+        <div class="dropdown-menu">
+          <ul class="itens-menu">
+            <li>
+              <a
+                href="
+              ?"
+              >
+                Theme
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="wrapper-play"></div>
+        <div class="wrapper-list"></div>
+      </header>
+      <footer></footer>
+    </div>
     <script type="module" src="web/main.js"></script>
   </body>
 </html>
