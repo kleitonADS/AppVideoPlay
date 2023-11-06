@@ -1,0 +1,188 @@
+/* DropdownNavBar */
+.dropdown-menu {
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  border-radius: 20px;
+  border: 0.5px solid var(--colorBorderPink);
+  opacity: 0;
+  visibility: hidden;
+  transition: ease-in 0.3s;
+  background: var(--backgroundBody);
+  box-shadow: var(--boxShadowDropDownMenu);
+}
+
+/* Theme checkbox */
+.ball {
+  background-color: var(--colorWhite);
+  border-radius: 50%;
+  left: -1.5px;
+  position: absolute;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+  height: 24px;
+  width: 24px;
+  z-index: 4;
+}
+
+.ball:hover {
+  outline: 2px solid var(--mainColorGreen);
+}
+
+.label.controls .ball-on {
+  font-size: 0.7rem;
+  color: var(--colorWhite);
+}
+
+.label.controls .ball-off {
+  font-size: 0.7rem;
+  padding-right: 1.5px;
+  color: var(--colorWhite);
+}
+
+.label {
+  background-color: var(--mainColorGreen);
+  border-radius: 50px;
+  border: 2px solid var(--colorWhite);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 25px;
+  width: 52px;
+  margin-top: 10px;
+}
+
+.label.controls {
+  background-color: var(--mainColorPink);
+  border: 2px solid var(--mainColorGreen);
+  box-shadow: var(--boxShadowLabelControlPink);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(26px);
+}
+
+.checkbox:checked + .label .ball.controls {
+  border: 2px solid var(--colorWhite);
+}
+
+nav.dropdown-active + .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 2.5rem;
+}
+
+nav.dropdown-active .menu-icon .line-1 {
+  margin-top: 0px;
+  transform: rotateZ(45deg);
+  transition: ease-in 0.3s;
+}
+
+nav.dropdown-active .menu-icon .line-2 {
+  margin-top: -12px;
+  transform: rotateZ(-45deg);
+  transition: ease-in 0.3s;
+}
+
+.itens-menu {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.itens-menu li {
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem;
+  border-right: 1px solid var(--colorWhite);
+}
+.icons-social-medias {
+  display: flex;
+  justify-content: space-between;
+}
+.icons-social-medias li {
+  margin: 0.5rem 0.5rem;
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--mainColorPink);
+  border-radius: 50%;
+  background: var(--backgroundButtonPink);
+  box-shadow: var(--boxShadowIconsSocialMedia);
+  transform: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icons-social-medias li svg {
+  scale: 2;
+  height: 10px;
+}
+
+.button-tiktok:active,
+.button-instagram:active,
+.button-youtube:active {
+  box-shadow: var(--boxShadowButtonsMediasSocial);
+  background: var(--mainColorPink);
+  border: 2px solid var(--mainColorGreen);
+}
+
+.button-tiktok:hover,
+.button-instagram:hover,
+.button-youtube:hover {
+  border: 2px solid var(--colorWhite);
+}
+
+li.label-controls {
+  border: 0;
+}
+
+.itens-menu li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itens-menu span {
+  color: var(--colorWhite);
+}
+
+@media only screen and (max-width: 680px) {
+  .dropdown-menu {
+    height: 40%;
+  }
+  .itens-menu {
+    flex-wrap: wrap;
+  }
+
+  .itens-menu li.button-instagram,
+  .itens-menu li.button-youtube,
+  .itens-menu li.button-tiktok {
+    border: 1.8px solid var(--mainColorPink);
+  }
+
+  .itens-menu li.button-instagram:hover,
+  .itens-menu li.button-youtube:hover,
+  .itens-menu li.button-tiktok:hover {
+    border: 1.8px solid var(--colorWhite);
+  }
+
+  .itens-menu li.button-tiktok:active,
+  .itens-menu li.button-instagram:active,
+  .itens-menu li.button-youtube:active {
+    box-shadow: var(--boxShadowButtonsMediasSocial);
+    background: var(--mainColorPink);
+    border: 2px solid var(--mainColorGreen);
+  }
+
+  .itens-menu li {
+    border: 0;
+  }
+}

@@ -1,6 +1,15 @@
 :root {
   --colorWhite: #fff;
-  --backgroundBody: #e31ee6;
+  --mainColorPink: #e31ee6;
+  --colorBorderPink: #ff2dff;
+  --mainColorGreen: #b0bd00;
+  --colorTransparent: transparent;
+  --backgroundButtonPink: linear-gradient(145deg, #f320f6, #cc1bcf);
+  --boxShadowDropDownMenu: -2px 3px 16px #740f75, -6px -11px 16px #ff2dff;
+  --boxShadowLabelControlPink: 6px 6px 12px #b618b8, -6px -6px 12px #ff24ff;
+  --boxShadowIconsSocialMedia: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
+  --boxShadowButtonsMediasSocial: 10px 7px 28px #740f75, -6px -8px 28px #ff2dff;
+  --boxShadowButtonHeader: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
 }
 
 * {
@@ -12,7 +21,7 @@
 }
 
 body {
-  background-color: var(--backgroundBody);
+  background-color: var(--mainColorPink);
   height: 100vh;
   display: flex;
   width: 100%;
@@ -28,5 +37,22 @@ button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: var(--colorWhite);
+  color: var(--colorTransparent);
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
 }

@@ -1,5 +1,8 @@
-import "./styles/global.css"
-import "./styles/app.css"
+import "./themeToggle.js"
 
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.js'
+import { toogleMenu } from "./dropmenu.js"
+window.toogleMenu = toogleMenu
+
+import "./styles/global.css"
+import "./styles/navbar.css"
+import "./styles/dropdownNavbar.css"
