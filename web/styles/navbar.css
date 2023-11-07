@@ -16,7 +16,6 @@ nav {
 
 nav h1 {
   color: var(--colorWhite);
-  transition: ease-in 0.2s;
   text-align: right;
   padding-left: 1rem;
 }
@@ -27,7 +26,7 @@ nav h1 {
   border: 2px solid var(--mainColorGreen);
   border-radius: 50%;
   background: var(--backgroundButtonPink);
-  box-shadow: var(--boxShadowButtonHeader);
+  box-shadow: var(--boxShadowButtonHeaderPink);
 }
 
 .menu-icon {

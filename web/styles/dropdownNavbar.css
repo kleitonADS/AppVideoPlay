@@ -1,15 +1,35 @@
 /* DropdownNavBar */
 .dropdown-menu {
   width: 100%;
-  height: 100px;
+  height: 170px;
   margin-top: 1rem;
   border-radius: 20px;
   border: 0.5px solid var(--colorBorderPink);
   opacity: 0;
   visibility: hidden;
-  transition: ease-in 0.3s;
   background: var(--backgroundBody);
-  box-shadow: var(--boxShadowDropDownMenu);
+  box-shadow: var(--boxShadowDropDownMenuPink);
+  
+  padding-bottom: 2rem;
+
+  /* transition: box-shadow ease-in-out 0.2s; */
+}
+
+.title-dropdrow {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  /* color: var(--colorWhite); */
+}
+
+.title-dropdrow span.icon-settings {
+  display: flex;
+}
+
+.title-dropdrow span.title-settings {
+  color: var(--colorWhite);
+  font-weight: 700;
+  padding-left: 0.2rem;
 }
 
 /* Theme checkbox */
@@ -23,6 +43,7 @@
   height: 24px;
   width: 24px;
   z-index: 4;
+  border: 2px solid var(--mainColorGreen);
 }
 
 .ball:hover {
@@ -70,13 +91,14 @@ input[type="checkbox"] {
 }
 
 .checkbox:checked + .label .ball.controls {
-  border: 2px solid var(--colorWhite);
+  border: 2px solid var(--mainColorGreen);
 }
 
 nav.dropdown-active + .dropdown-menu {
   opacity: 1;
   visibility: visible;
   margin-top: 2.5rem;
+  height: auto;
 }
 
 nav.dropdown-active .menu-icon .line-1 {
@@ -97,6 +119,8 @@ nav.dropdown-active .menu-icon .line-2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: -37px;
+  padding-top: 1rem;
 }
 
 .itens-menu li {
@@ -113,10 +137,10 @@ nav.dropdown-active .menu-icon .line-2 {
   margin: 0.5rem 0.5rem;
   width: 35px;
   height: 35px;
-  border: 2px solid var(--mainColorPink);
+  border: 2px solid var(--colorWhite);
   border-radius: 50%;
   background: var(--backgroundButtonPink);
-  box-shadow: var(--boxShadowIconsSocialMedia);
+  box-shadow: var(--boxShadowIconsSocialMediaPink);
   transform: all 0.3s ease;
   cursor: pointer;
 }
@@ -129,15 +153,17 @@ nav.dropdown-active .menu-icon .line-2 {
 .button-tiktok:active,
 .button-instagram:active,
 .button-youtube:active {
-  box-shadow: var(--boxShadowButtonsMediasSocial);
-  background: var(--mainColorPink);
-  border: 2px solid var(--mainColorGreen);
+  box-shadow: var(--boxShadowButtonsMediasSocialPink);
+  background: var(--mainColorGreen);
+  border: 2px solid var(--colorBorderPink);
+  scale: 1.2;
 }
 
 .button-tiktok:hover,
 .button-instagram:hover,
 .button-youtube:hover {
-  border: 2px solid var(--colorWhite);
+  border: 2px solid var(--mainColorGreen);
+  transition: ease-in 0.4s;
 }
 
 li.label-controls {
@@ -157,29 +183,41 @@ li.label-controls {
 @media only screen and (max-width: 680px) {
   .dropdown-menu {
     height: 40%;
+    padding-bottom: 2rem;
   }
   .itens-menu {
     flex-wrap: wrap;
+    padding-top: 2rem;
   }
 
   .itens-menu li.button-instagram,
   .itens-menu li.button-youtube,
   .itens-menu li.button-tiktok {
-    border: 1.8px solid var(--mainColorPink);
+    border: 1.8px solid var(--colorWhite);
   }
 
   .itens-menu li.button-instagram:hover,
   .itens-menu li.button-youtube:hover,
   .itens-menu li.button-tiktok:hover {
-    border: 1.8px solid var(--colorWhite);
+    border: 1.8px solid var(--mainColorGreen);
+  }
+
+  /* Green Theme */
+  .green-theme .itens-menu li.button-tiktok:active,
+  .green-theme .itens-menu li.button-instagram:active,
+  .green-theme .itens-menu li.button-youtube:active {
+    box-shadow: var(--boxShadowButtonsMediasSocialGreen);
+    background: var(--mainColorPink);
+    border: 2px solid var(--mainColorGreen);
   }
 
   .itens-menu li.button-tiktok:active,
   .itens-menu li.button-instagram:active,
   .itens-menu li.button-youtube:active {
-    box-shadow: var(--boxShadowButtonsMediasSocial);
-    background: var(--mainColorPink);
-    border: 2px solid var(--mainColorGreen);
+    box-shadow: var(--boxShadowButtonsMediasSocialPink);
+    background: var(--mainColorGreen);
+    border: 2px solid var(--colorBorderPink);
+    scale: 1.2;
   }
 
   .itens-menu li {

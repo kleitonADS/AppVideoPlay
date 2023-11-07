@@ -1,15 +1,30 @@
 :root {
   --colorWhite: #fff;
   --mainColorPink: #e31ee6;
-  --colorBorderPink: #ff2dff;
+  --colorBorderPink: #df24e2;
   --mainColorGreen: #b0bd00;
   --colorTransparent: transparent;
   --backgroundButtonPink: linear-gradient(145deg, #f320f6, #cc1bcf);
-  --boxShadowDropDownMenu: -2px 3px 16px #740f75, -6px -11px 16px #ff2dff;
+  --boxShadowDropDownMenuPink: -2px 3px 16px #740f75, -6px -11px 16px #ff2dff;
   --boxShadowLabelControlPink: 6px 6px 12px #b618b8, -6px -6px 12px #ff24ff;
-  --boxShadowIconsSocialMedia: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
-  --boxShadowButtonsMediasSocial: 10px 7px 28px #740f75, -6px -8px 28px #ff2dff;
-  --boxShadowButtonHeader: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
+  --boxShadowIconsSocialMediaPink: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
+  --boxShadowButtonsMediasSocialPink: 18px 7px 28px #740f75, -6px -8px 28px #ff2dff;
+  --boxShadowButtonHeaderPink: 5px 5px 10px #740f75, -5px -5px 10px #ff2dff;
+  --boxShadowButtonHeaderGreen : 5px 5px 10px #8d9700,
+             -5px -5px 10px #d3e300;
+  --boxShadowDropDownMenuGreen: 14px 14px 28px #8d9700,
+             -14px -14px 28px #d3e300;
+  --colorBorderGreen : #b3bf0c;
+
+  --boxShadowLabelControlGreen: 6px 6px 12px #8d9700,
+             -6px -6px 12px #d3e300;
+
+  --boxShadowIconsSocialMediaGreen:  5px 5px 10px #8d9700,
+             -5px -5px 10px #d3e300;
+
+  --boxShadowButtonsMediasSocialGreen: 10px 10px 20px #8d9700,
+             -10px -10px 20px #d3e300; 
+   
 }
 
 * {

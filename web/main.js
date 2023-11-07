@@ -6,3 +6,4 @@ window.toogleMenu = toogleMenu
 import "./styles/global.css"
 import "./styles/navbar.css"
 import "./styles/dropdownNavbar.css"
+import "./styles/greenTheme.css"

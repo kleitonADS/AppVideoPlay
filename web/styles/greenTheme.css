@@ -1,0 +1,66 @@
+.green-theme {
+  background-color: var(--mainColorGreen);
+}
+
+.green-theme .button-header {
+  border: 2px solid var(--mainColorPink);
+  background: var(--mainColorGreen);
+  box-shadow: var(--boxShadowButtonHeaderGreen);
+
+}
+
+.green-theme .label{
+  background-color: var(--mainColorPink);
+}
+
+.green-theme .dropdown-menu{
+  box-shadow: var(--boxShadowDropDownMenuGreen);
+  border: 0.5px solid var(--colorBorderGreen);
+}
+.green-theme .label.controls {
+  background-color: var(--mainColorGreen);
+  border: 2px solid var(--mainColorPink);
+  box-shadow: var(--boxShadowLabelControlGreen);
+}
+
+
+.green-theme .ball {
+  border: 2px solid var(--mainColorPink);
+}
+
+.green-theme .checkbox:checked + .label .ball.controls {
+  border: 2px solid var(--mainColorPink);
+}
+.green-theme .ball:hover {
+  outline: 2px solid var(--mainColorPink);
+}
+
+.green-theme .menu-icon:hover .line-1 {
+  background: var(--mainColorPink);
+}
+
+.green-theme .menu-icon:hover .line-2 {
+  background: var(--mainColorPink);
+}
+
+.green-theme .icons-social-medias li {
+  background: var(--mainColorGreen);
+  box-shadow: var(--boxShadowIconsSocialMediaGreen);
+  border: 2px solid var(--colorWhite);
+}
+
+
+.green-theme .button-tiktok:hover,
+.green-theme .button-instagram:hover,
+.green-theme .button-youtube:hover{
+  border: 2px solid var(--mainColorPink);
+  transition: ease-in 0.4s;
+}
+
+.green-theme .button-tiktok:active,
+.green-theme .button-instagram:active,
+.green-theme .button-youtube:active {
+  box-shadow: var(--boxShadowButtonsMediasSocialGreen);
+  background: var(--mainColorPink);
+  border: 2px solid var(--mainColorGreen);
+}
