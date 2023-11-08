@@ -1,17 +1,18 @@
 /* DropdownNavBar */
 .dropdown-menu {
-  width: 100%;
+  /* width: 100%; */
+  width: 50%;
   height: 170px;
   margin-top: 1rem;
   border-radius: 20px;
   border: 0.5px solid var(--colorBorderPink);
   opacity: 0;
   visibility: hidden;
-  background: var(--backgroundBody);
+  background: var(--mainColorPink);
   box-shadow: var(--boxShadowDropDownMenuPink);
-  
+  display: none;
   padding-bottom: 2rem;
-
+  z-index: 1000;
   /* transition: box-shadow ease-in-out 0.2s; */
 }
 
@@ -50,12 +51,12 @@
   outline: 2px solid var(--mainColorGreen);
 }
 
-.label.controls .ball-on {
+.label.controls-dropdown .ball-on {
   font-size: 0.7rem;
   color: var(--colorWhite);
 }
 
-.label.controls .ball-off {
+.label.controls-dropdown .ball-off {
   font-size: 0.7rem;
   padding-right: 1.5px;
   color: var(--colorWhite);
@@ -76,7 +77,7 @@
   margin-top: 10px;
 }
 
-.label.controls {
+.label.controls-dropdown {
   background-color: var(--mainColorPink);
   border: 2px solid var(--mainColorGreen);
   box-shadow: var(--boxShadowLabelControlPink);
@@ -99,6 +100,7 @@ nav.dropdown-active + .dropdown-menu {
   visibility: visible;
   margin-top: 2.5rem;
   height: auto;
+  display: list-item;
 }
 
 nav.dropdown-active .menu-icon .line-1 {
@@ -180,7 +182,7 @@ li.label-controls {
   color: var(--colorWhite);
 }
 
-@media only screen and (max-width: 680px) {
+/* @media only screen and (max-width: 680px) {
   .dropdown-menu {
     height: 40%;
     padding-bottom: 2rem;
@@ -202,7 +204,7 @@ li.label-controls {
     border: 1.8px solid var(--mainColorGreen);
   }
 
-  /* Green Theme */
+
   .green-theme .itens-menu li.button-tiktok:active,
   .green-theme .itens-menu li.button-instagram:active,
   .green-theme .itens-menu li.button-youtube:active {
@@ -223,4 +225,4 @@ li.label-controls {
   .itens-menu li {
     border: 0;
   }
-}
+} */

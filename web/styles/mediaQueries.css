@@ -1,0 +1,194 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  #app {
+    padding: 0px;
+  }
+  nav {
+    padding: 0;
+  }
+  nav h1 {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+  .main-content {
+    margin: 0;
+    height: auto;
+  }
+
+  .button-header {
+    width: 35px;
+    height: 35px;
+  }
+  .itens-menu {
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+  .itens-menu li {
+    border: 0;
+  }
+  .dropdown-menu {
+    position: fixed;
+    width: 90%;
+  }
+
+  nav.dropdown-active + .dropdown-menu {
+    margin-top: 7.5rem;
+  }
+
+  .song-details .name {
+    font-size: 0.9rem;
+  }
+
+  .song-details .artist {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .button-header-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+  }
+
+  .itens-menu li.button-instagram,
+  .itens-menu li.button-youtube,
+  .itens-menu li.button-tiktok {
+    border: 1.8px solid var(--colorWhite);
+  }
+
+  .itens-menu li.button-instagram:hover,
+  .itens-menu li.button-youtube:hover,
+  .itens-menu li.button-tiktok:hover {
+    border: 1.8px solid var(--mainColorGreen);
+  }
+
+  .green-theme .itens-menu li.button-tiktok:active,
+  .green-theme .itens-menu li.button-instagram:active,
+  .green-theme .itens-menu li.button-youtube:active {
+    box-shadow: var(--boxShadowButtonsMediasSocialGreen);
+    background: var(--mainColorPink);
+    border: 2px solid var(--mainColorGreen);
+  }
+
+  .itens-menu li.button-tiktok:active,
+  .itens-menu li.button-instagram:active,
+  .itens-menu li.button-youtube:active {
+    box-shadow: var(--boxShadowButtonsMediasSocialPink);
+    background: var(--mainColorGreen);
+    border: 2px solid var(--colorBorderPink);
+    scale: 1.2;
+  }
+
+  .progress-bar::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-bar::after {
+    width: 8px;
+    height: 8px;
+    right: -10px;
+  }
+
+  #visualiser {
+   display: none;
+  }
+
+  li.animation-li {
+    display: none;
+  }
+
+  .buttonsControl.prev {
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+  }
+  .buttonsControl.prev img {
+    width: 1.3rem;
+  }
+
+  .buttonsControl.play-pause {
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+  }
+  .buttonsControl.play-pause img {
+    width: 1.3rem;
+  }
+
+  .buttonsControl.next {
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+  }
+  .buttonsControl.next img {
+    width: 1.3rem;
+  }
+  .label {
+    width: 46px;
+  }
+
+  .label.controls-dropdown .ball-on {
+    font-size: 0.5rem;
+  }
+
+  .label.controls-dropdown .ball-off {
+    font-size: 0.5rem;
+  }
+
+  .wrapper-list {
+    display: none;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 0px; 
+    background: #e31ee6;
+    box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
+      transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* High pixel ratio devices ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}

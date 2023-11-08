@@ -16,6 +16,7 @@
 .green-theme .dropdown-menu{
   box-shadow: var(--boxShadowDropDownMenuGreen);
   border: 0.5px solid var(--colorBorderGreen);
+  background: var(--mainColorGreen);
 }
 .green-theme .label.controls {
   background-color: var(--mainColorGreen);
