@@ -1,5 +1,10 @@
 import { allMusic } from "./music-list.js"
 
+for (let i = 0; i < allMusic.length; i++) {
+  console.log(allMusic[i])
+}
+
+
 // Const
 const wrapper = document.querySelector(".wrapper-play")
 const musicImg = wrapper.querySelector(".img-cover")
@@ -260,5 +265,7 @@ window.addEventListener("load", () => {
 
   // fimm
 })
+
+
 
 

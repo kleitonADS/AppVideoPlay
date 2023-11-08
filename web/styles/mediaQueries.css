@@ -1,15 +1,94 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
+  
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
   /* Styles */
+  #app {
+    padding: 0px;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .main-content{
+    margin: 1rem;
+    height: 800px;
+  }
+  nav {
+    padding: 0;
+  }
+
+  .itens-menu {
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+
+  .itens-menu li {
+    border: 0;
+  }
+  .dropdown-menu {
+    position: fixed;
+    width: 75%;
+  }
+
+  nav.dropdown-active + .dropdown-menu {
+    margin-top: 7.5rem;
+    width: 50%;
+  }
+
+  .progress-bar::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-bar::after {
+    width: 8px;
+    height: 8px;
+    right: -10px;
+  }
+
+  .wrapper-list {
+    display: none;
+    width: 100%;
+    height: 154px;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: -7rem;
+    margin-left: 0px;
+    background: #e31ee6;
+    box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
+    transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  }
+
+  .main-content-list {
+    margin: 1rem;
+    height: 800px;
+  }
+
+  #visualiser{
+    margin-left: 0;
+    position: static;
+    margin-top: -100px;
+  }
+
+  .progress-area {
+    margin-top: -75px;
+  }
+  .controls{
+    margin: 65px 8px 5px 8px
+  }
+
+  .song-details .artist {
+    text-align: left;
+  }
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
+  .content-flex {
+    flex-direction: column;
+  }
   #app {
     padding: 0px;
   }
@@ -159,12 +238,23 @@
     background: #e31ee6;
     box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
       transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  }
+
+  
 }
+
+/* @media only screen and (min-width: 321px) {
+#app{
+  width: 30px;
 }
+} */
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */
+  /* .main-content{
+    height: 30px;
+  } */
 }
 
 /* iPads (landscape) ----------- */

@@ -1,6 +1,8 @@
 import "./themeToggle.js"
 import "./controlToggle.js"
 import "./timerToggle.js"
+import "./aniamtionToggle.js"
+// import "./showListSongs.js"
 
 import { toogleMenu } from "./dropmenu.js"
 window.toogleMenu = toogleMenu
@@ -8,7 +10,7 @@ window.toogleMenu = toogleMenu
 import { toogleListSong } from "./listSongToggle.js"
 window.toogleListSong = toogleListSong
 
-import {} from "./player.js";
+import {} from "./player.js"
 
 import "./styles/global.css"
 import "./styles/navbar.css"
