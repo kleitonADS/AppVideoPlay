@@ -1,11 +1,5 @@
 .main-content {
-  /* display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 1rem; */
-  display: flex;
+   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
@@ -15,10 +9,7 @@
   padding: 1rem;
   padding-bottom: 3rem;
   margin: 2rem;
-  /* margin-top: -8rem; */
-  /* overflow: hidden; */
-  border: 4px solid var(--colorBorderPink);
-  /* background: linear-gradient(145deg, #bcca00, #9eaa00); */
+   border: 4px solid var(--colorBorderPink);
   background: var(--mainColorPink);
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
 
@@ -26,7 +17,7 @@
 }
 
 .main-content-list {
-  display: flex;
+  display: none;
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
@@ -35,15 +26,12 @@
   border-radius: 20px;
   padding: 1rem;
   padding-bottom: 3rem;
-  /* margin: 2rem; */
-  /* margin-top: -8rem; */
-  /* overflow: hidden; */
   border: 4px solid var(--colorBorderPink);
-  /* background: linear-gradient(145deg, #bcca00, #9eaa00); */
   background: var(--mainColorPink);
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-
   z-index: 100;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .wrapper-play {
@@ -70,7 +58,6 @@
 .song-timer,
 .controls-play {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   width: 100%;
 }
@@ -83,9 +70,7 @@
   height: 40px;
   border: 2px solid var(--colorBorderPink);
   border-radius: 50%;
-  background: var(--mainColorGreen);
-  /* box-shadow: -8px -1px 12px 2px #5a6000, -5px -5px 10px #ffff00;
-  box-shadow: 3px 4px 10px #5a6000, 1px -6px 10px #ffff00; */
+  background: var(--colorBorderPink);
   box-shadow: 16px 16px 32px #c11ac4, -16px -16px 32px #ff23ff;
   transform: all 0.3s ease;
 }
@@ -120,6 +105,14 @@
   transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
 }
 
+.main-content-list.list-songs-active{
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+}
+
 .player {
   margin-top: 0rem;
 }
@@ -137,12 +130,14 @@
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
 }
 
+
 .img-cover {
   width: 15rem;
   height: 15rem;
   margin-top: 0.5rem;
   object-fit: cover;
   border-radius: 50%;
+  
 }
 
 #visualiser {
@@ -235,27 +230,41 @@
 }
 
 .buttonsControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
-  border: 3px solid #e31ee6;
+  border: 3px solid var(--mainColorGreen);
   border-radius: 50%;
-  background: linear-gradient(284deg, #bcca00, #9eaa00);
-  box-shadow: -8px -1px 12px 2px #5a6000, -5px -5px 10px #ffff00;
-  box-shadow: 3px 4px 10px #5a6000, 1px -6px 10px #ffff00;
+  background: linear-gradient(145deg, #f320f6, #cc1bcf);
+  box-shadow: 16px 16px 32px #c11ac4, -16px -16px 32px #ff23ff;
+  transform: all 0.3s ease;
 }
 
 .buttonsControl.play-pause:active {
   background: #e31ee6;
 }
 
-.buttonsControl:active {
-  box-shadow: 14px 14px 28px #5a6000, -14px -14px 28px #ffff00;
+.button-header:active {
+  box-shadow:  15px 15px 45px #8d138f,
+             -15px -15px 45px #ff29ff;
 }
 
-.rotate {
+.button-header-player {
+  box-shadow:  15px 15px 45px #8d138f,
+             -15px -15px 45px #ff29ff;
+}
+
+.buttonsControl:active {
+  box-shadow:  15px 15px 45px #8d138f,
+             -15px -15px 45px #ff29ff;
+}
+
+/* .rotate {
   animation: rotation 8s infinite linear;
   transform-origin: center;
-}
+} */
 
 @keyframes rotation {
   from {

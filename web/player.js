@@ -1,9 +1,28 @@
 import { allMusic } from "./music-list.js"
 
-for (let i = 0; i < allMusic.length; i++) {
-  console.log(allMusic[i])
-}
+const ul = document.querySelector(".list-all-songs")
 
+for (let i = 0; i < allMusic.length; i++) {
+  const video = allMusic[i]
+  const li = document.createElement("li")
+  li.innerHTML = `<div class="content-img-cover">
+        <img src="./covers/${video.cover}" alt="cover-video" >
+       </div>
+       <div class="content-title">
+        <h1>${video.song}</h1>
+        <h2>${video.artist}</h2>
+       </div>
+       <div class="content-bt-play">
+        <button class="bt-play" type="button">
+        <img src="./play-fill-small.svg" alt="play list video" >
+       </button>
+       </div>
+       <div class="content-bt-delete">
+         <button class="bt-delete" type="button"><img src="./deletebin.svg" alt="play list video" ></button>
+       </div>`
+  
+  ul.appendChild(li)
+}
 
 // Const
 const wrapper = document.querySelector(".wrapper-play")
@@ -24,9 +43,9 @@ window.addEventListener("load", () => {
   loadMusic(musicIndex)
 
   function loadMusic(indexNumb) {
-    musicName.innerText = allMusic[indexNumb - 1].name
+    musicName.innerText = allMusic[indexNumb - 1].song
     musicArtist.innerText = allMusic[indexNumb - 1].artist
-    musicImg.src = `/video/${allMusic[indexNumb - 1].img}.mp4`
+    musicImg.src = `/video/${allMusic[indexNumb - 1].video}.mp4`
     // musicImg.src = `assets/cover/${allMusic[indexNumb -1 ].img}.jpg`;
     // mainAudio.src = `/music/${allMusic[indexNumb - 1].src}.mp3`
   }
@@ -43,7 +62,7 @@ window.addEventListener("load", () => {
     wrapper.classList.remove("paused")
     musicImg.classList.remove("rotate")
     // playPauseBtn.innerHTML = `<img src="assets/img/play-fill.svg" alt="Play" srcset="">`
-    playPauseBtn.innerHTML = `<img src="public/play-fill.svg" alt="Play" srcset="">`
+    playPauseBtn.innerHTML = `<img src="public/play-fill.svg" alt="Play" >`
     // mainAudio.pause()
     musicImg.pause()
   }
@@ -265,7 +284,3 @@ window.addEventListener("load", () => {
 
   // fimm
 })
-
-
-
-
