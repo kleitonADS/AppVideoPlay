@@ -2,19 +2,54 @@
   background-color: var(--mainColorGreen);
 }
 
+.green-theme .main-content {
+  box-shadow: var(--boxShadowDropDownMenuGreen);
+  border: 0.5px solid var(--colorBorderGreen);
+  background: var(--mainColorGreen);
+}
+
+.green-theme .main-content-list {
+  box-shadow: var(--boxShadowDropDownMenuGreen);
+  border: 0.5px solid var(--colorBorderGreen);
+  background: var(--mainColorGreen);
+}
+
+.green-theme .wrapper-list {
+  box-shadow: var(--boxShadowDropDownMenuGreen);
+  border: 0.5px solid var(--colorBorderGreen);
+  background: var(--mainColorGreen);
+}
+
 .green-theme .button-header {
   border: 2px solid var(--mainColorPink);
   background: var(--mainColorGreen);
   box-shadow: var(--boxShadowButtonHeaderGreen);
-
 }
 
-.green-theme .label{
+.green-theme .label {
   background-color: var(--mainColorPink);
 }
 
-.green-theme .dropdown-menu{
-  box-shadow: var(--boxShadowDropDownMenuGreen);
+.green-theme .buttonsControl {
+  border: 3px solid var(--mainColorPink);
+  border-radius: 145px;
+  background: linear-gradient(145deg, #bcca00, #9eaa00);
+  box-shadow: 16px 16px 32px #96a100, -16px -16px 32px #cad900;
+}
+
+.green-theme .img-area{
+  box-shadow:  14px 14px 28px #96a100,
+             -14px -14px 28px #cad900;
+}
+
+.green-theme .label.controls-dropdown{
+  box-shadow:  6px 6px 12px #96a100,
+             -6px -6px 12px #cad900;
+             border: 2px solid var(--mainColorPink);
+}
+
+.green-theme .dropdown-menu {
+  box-shadow: -3px 0px 12px #96a100, -6px -6px 12px #cad900;
   border: 0.5px solid var(--colorBorderGreen);
   background: var(--mainColorGreen);
 }
@@ -23,7 +58,6 @@
   border: 2px solid var(--mainColorPink);
   box-shadow: var(--boxShadowLabelControlGreen);
 }
-
 
 .green-theme .ball {
   border: 2px solid var(--mainColorPink);
@@ -44,16 +78,19 @@
   background: var(--mainColorPink);
 }
 
+.green-theme .button-header-player.active {
+  background: var(--mainColorPink);
+}
+
 .green-theme .icons-social-medias li {
   background: var(--mainColorGreen);
   box-shadow: var(--boxShadowIconsSocialMediaGreen);
   border: 2px solid var(--colorWhite);
 }
 
-
 .green-theme .button-tiktok:hover,
 .green-theme .button-instagram:hover,
-.green-theme .button-youtube:hover{
+.green-theme .button-youtube:hover {
   border: 2px solid var(--mainColorPink);
   transition: ease-in 0.4s;
 }
@@ -65,3 +102,31 @@
   background: var(--mainColorPink);
   border: 2px solid var(--mainColorGreen);
 }
+
+.green-theme .button-header-player {
+  border: 2px solid var(--colorBorderGreen);
+  background-color: var(--mainColorGreen);
+  box-shadow:  15px 15px 30px #96a100,
+             -15px -15px 30px #cad900;;
+}
+
+.green-theme .list-all-songs li 
+{
+  box-shadow:  14px 14px 28px #96a100,
+             -14px -14px 28px #cad900;
+}
+
+.green-theme .bt-delete 
+{
+  border: 3px solid var(--mainColorPink);
+  box-shadow:  14px 14px 28px #96a100,
+             -14px -14px 28px #cad900;
+}
+
+.green-theme .bt-play 
+{
+  border: 3px solid var(--mainColorPink);
+  box-shadow:  14px 14px 28px #96a100,
+             -14px -14px 28px #cad900;
+}
+

@@ -13,6 +13,7 @@
   display: none;
   padding-bottom: 2rem;
   z-index: 1000;
+
   /* transition: box-shadow ease-in-out 0.2s; */
 }
 
@@ -87,6 +88,10 @@ input[type="checkbox"] {
   display: none;
 }
 
+.button-header-player.active {
+  background: var(--mainColorGreen);
+}
+
 .checkbox:checked + .label .ball {
   transform: translateX(26px);
 }
@@ -100,7 +105,8 @@ nav.dropdown-active + .dropdown-menu {
   visibility: visible;
   margin-top: 2.5rem;
   height: auto;
-  display: list-item;
+  display: initial;
+  transition: ease-in 0.3s;
 }
 
 nav.dropdown-active .menu-icon .line-1 {
@@ -181,48 +187,3 @@ li.label-controls {
 .itens-menu span {
   color: var(--colorWhite);
 }
-
-/* @media only screen and (max-width: 680px) {
-  .dropdown-menu {
-    height: 40%;
-    padding-bottom: 2rem;
-  }
-  .itens-menu {
-    flex-wrap: wrap;
-    padding-top: 2rem;
-  }
-
-  .itens-menu li.button-instagram,
-  .itens-menu li.button-youtube,
-  .itens-menu li.button-tiktok {
-    border: 1.8px solid var(--colorWhite);
-  }
-
-  .itens-menu li.button-instagram:hover,
-  .itens-menu li.button-youtube:hover,
-  .itens-menu li.button-tiktok:hover {
-    border: 1.8px solid var(--mainColorGreen);
-  }
-
-
-  .green-theme .itens-menu li.button-tiktok:active,
-  .green-theme .itens-menu li.button-instagram:active,
-  .green-theme .itens-menu li.button-youtube:active {
-    box-shadow: var(--boxShadowButtonsMediasSocialGreen);
-    background: var(--mainColorPink);
-    border: 2px solid var(--mainColorGreen);
-  }
-
-  .itens-menu li.button-tiktok:active,
-  .itens-menu li.button-instagram:active,
-  .itens-menu li.button-youtube:active {
-    box-shadow: var(--boxShadowButtonsMediasSocialPink);
-    background: var(--mainColorGreen);
-    border: 2px solid var(--colorBorderPink);
-    scale: 1.2;
-  }
-
-  .itens-menu li {
-    border: 0;
-  }
-} */
