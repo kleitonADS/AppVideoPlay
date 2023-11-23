@@ -7,7 +7,7 @@ import "./lableToogle.js"
 import "./btShorts.js"
 import "./btInstagram.js"
 import "./btTiktok.js"
-import "./form.js"
+
 
 import { toogleMenu } from "./dropmenu.js"
 window.toogleMenu = toogleMenu
@@ -23,6 +23,9 @@ window.toogleLirycs = toogleLirycs
 
 import { chooseLables } from "./ControlsIconLables.js"
 window.chooseLables = chooseLables
+
+import { deleteVideo } from "./deleteVideo.js"
+window.deleteVideo = deleteVideo
 
 import {} from "./player.js"
 

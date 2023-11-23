@@ -13,12 +13,12 @@ for (let i = 0; i < allMusic.length; i++) {
         <h2>${video.artist}</h2>
        </div>
        <div class="content-bt-play">
-        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo},${video.artist})">
+        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo})">
         <img src="./file-edit-line.svg" alt="play list video" >
        </button>
        </div>
        <div class="content-bt-delete">
-         <button class="bt-delete" type="button" onClick="deleteVideo(${video.nameVideo}, ${video.artist})"><img src="./deletebin.svg" alt="play list video"  ></button>
+         <button class="bt-delete" type="button" onClick="deleteVideo(${video.nameVideo})"><img src="./deletebin.svg" alt="play list video"  ></button>
        </div>`
 
   ul.appendChild(li)

@@ -34,20 +34,25 @@ app.post(
     { name: "cover", maxCount: 100 },
     { name: "Video", maxCount: 1000 },
   ]),
-  async function (req, res)  {
+  async function (req, res) {
     try {
-       await savefile(req.body, req.files)
-        return res.json({ message: "Successfully uploaded files" })
+      await savefile(req.body, req.files)
+      return res.json({ message: "Successfully uploaded files" })
     } catch (error) {
       console.log(error)
       return res.json({ message: "Error Add the Video" })
     }
-
-   
-  
-   
   }
 ),
+  app.get("/deleteVideo", async function (req, res) {
+    console.log('aquii delete')
+    // try {
+    //   return res.json({ message: "Successfully uploaded files" })
+    // } catch (error) {
+    //   console.log(error)
+    //   return res.json({ message: "Error Add the Video" })
+    // }
+  }),
   app.listen(3000, () => {
     console.log(`Server started...`)
   })
