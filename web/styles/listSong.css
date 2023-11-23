@@ -15,11 +15,39 @@
   border: 2px solid var(--colorWhite);
 }
 
-.list-all-songs  {
+.content-list-all-song {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-all-songs {
+  display: flex;
+      width: 100%;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+}
+
+.button-new-video {
+  display: flex;
+  width: 70%;
+  margin-left: 1rem;
+  color: var(--colorWhite);
+  padding: 0.5rem;
+  background-color: var(--mainColorPink);
+  border: 3px solid var(--mainColorGreen);
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+}
+
+.button-new-video:hover {
+  background-color: var(--mainColorGreen);
+  border: 3px solid var(--colorWhite);
 }
 
 .list-all-songs li {
@@ -42,8 +70,8 @@ h2 {
   color: var(--colorWhite);
 }
 
-.bt-play{
-display: flex;
+.bt-play {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 35px;
@@ -56,7 +84,7 @@ display: flex;
   transform: all 0.3s ease;
 }
 
-.bt-delete{
+.bt-delete {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,4 +96,134 @@ display: flex;
   background: transparent;
   box-shadow: 16px 16px 32px #c11ac4, -16px -16px 32px #ff23ff;
   transform: all 0.3s ease;
+}
+
+.new-file-content {
+  width: 90%;
+  display: none;
+  height: auto;
+  flex-direction: column;
+  border: 2px solid var(--borderColorPink);
+  border-radius: 5%;
+  padding: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: center;
+  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+  transition: all 0.2s ease;
+
+}
+
+.content-inputs-form {
+  display: flex;
+  width: 90%;
+  height: auto;
+  flex-direction: column;
+}
+
+.title-new-video h1 {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--colorWhite);
+  padding-bottom: 1rem;
+}
+
+.content-inputs-form input {
+  display: flex;
+  width: 100%;
+  /* margin-left: 1rem; */
+  color: var(--colorWhite);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  /* background-color: var(--mainColorPink); */
+  border: 2px solid var(--mainColorGreen);
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--mainColorPink);
+  /* box-shadow: inset 20px 20px 60px #c11ac4, inset -20px -20px 60px #ff23ff; */
+  background: linear-gradient(145deg, #cc1bcf, #f320f6);
+  /* box-shadow:  35px 35px 70px #c11ac4,
+             -35px -35px 70px #ff23ff; */
+}
+.content-inputs-form input::placeholder {
+  color: var(--colorWhite);
+  user-select: none;
+}
+
+.bt-send {
+  display: flex;
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--colorWhite);
+  padding: 0.5rem;
+  background-color: var(--mainColorGreen);
+  border: 3px solid var(--mainColorGreen);
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+}
+
+.inputFiles[type="file"] {
+  display: flex;
+  width: 100%;
+  border: 0px;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0;
+  margin: 0;
+}
+
+.custom-file-upload {
+  font-weight: 400;
+  color: var(--colorWhite);
+  margin: 1rem 0 0 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.new-file-content.active{
+  display: flex;
+  
+}
+
+/* .inputFiles::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+} */
+/* 
+.inputFiles{
+  border: 0;
+} */
+
+.inputFiles[type="file"]::file-selector-button {
+  display: flex;
+  width: 100%;
+  /* margin-right: 20px; */
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.inputFiles[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+
+.list-all-songs.list-none{
+   /* height: 150px; */
+  display: none;
+  /* overflow-y: scroll; */
 }

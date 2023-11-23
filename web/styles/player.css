@@ -1,3 +1,66 @@
+.label-media-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.shorts-top,
+.instagram-top,
+.tiktok-top {
+  width: 90%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 20px 0px 20px;
+  border-radius: 50px;
+  /* border: 2px solid white; */
+  margin-top: -39rem;
+  /* margin-top: 2rem; */
+  /* box-shadow: var(--boxShadowButtonHeaderPink); */
+}
+
+.shorts-top.active {
+  display: flex;
+}
+
+.shorts-top {
+  display: none;
+}
+
+.tiktok-top {
+  display: none;
+}
+
+.tiktok-top.active {
+  display: flex;
+}
+
+.instagram-top {
+  display: none;
+}
+
+.instagram-top.active {
+  display: flex;
+}
+
+.social-name {
+  color: white;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.label-controls.off {
+  display: none;
+}
+
+.viral-name {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0px 0 10px 0;
+}
+
 .main-content {
   display: flex;
   justify-content: flex-start;
@@ -16,13 +79,19 @@
   z-index: 100;
 }
 
+.icon-labels {
+  width: 35px;
+  height: 35px;
+  margin-left: 5px;
+}
+
 .main-content-list {
   display: none;
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  height: 590px;
-  max-width: 360px;
+  height: auto;
+  max-width: 380px;
   border-radius: 20px;
   padding: 1rem;
   padding-bottom: 3rem;
@@ -45,7 +114,7 @@
   max-width: 310px;
   border-radius: 20px;
   padding: 1rem;
-  /* margin-top: -8rem; */
+
   margin-left: -25px;
   background: #e31ee6;
   box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
@@ -88,6 +157,11 @@
   color: white;
   font-size: 1.3rem;
   text-transform: capitalize;
+}
+
+.video-hidden {
+  opacity: 1;
+  visibility: hidden;
 }
 
 .song-details .artist {
@@ -182,7 +256,7 @@
   width: 0%;
   position: relative;
   border-radius: inherit;
-  background: #e31ee6;
+  background: #ff24ff;
 }
 
 .progress-bar::before {
@@ -256,10 +330,10 @@
   box-shadow: 15px 15px 45px #8d138f, -15px -15px 45px #ff29ff;
 }
 
-/* .rotate {
+.rotate {
   animation: rotation 8s infinite linear;
   transform-origin: center;
-} */
+}
 
 @keyframes rotation {
   from {
@@ -290,3 +364,5 @@
 video::-webkit-media-controls {
   display: none;
 }
+
+

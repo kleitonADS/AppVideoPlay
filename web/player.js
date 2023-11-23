@@ -9,18 +9,18 @@ for (let i = 0; i < allMusic.length; i++) {
         <img src="./covers/${video.cover}" alt="cover-video" >
        </div>
        <div class="content-title">
-        <h1>${video.song}</h1>
+        <h1>${video.nameVideo}</h1>
         <h2>${video.artist}</h2>
        </div>
        <div class="content-bt-play">
-        <button class="bt-play" type="button">
-        <img src="./play-fill-small.svg" alt="play list video" >
+        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo},${video.artist})">
+        <img src="./file-edit-line.svg" alt="play list video" >
        </button>
        </div>
        <div class="content-bt-delete">
-         <button class="bt-delete" type="button"><img src="./deletebin.svg" alt="play list video" ></button>
+         <button class="bt-delete" type="button" onClick="deleteVideo(${video.nameVideo}, ${video.artist})"><img src="./deletebin.svg" alt="play list video"  ></button>
        </div>`
-  
+
   ul.appendChild(li)
 }
 
@@ -32,30 +32,31 @@ const musicArtist = wrapper.querySelector(".artist")
 const playPauseBtn = wrapper.querySelector(".play-pause")
 const prevBtn = wrapper.querySelector("#prev")
 const nextBtn = wrapper.querySelector("#next")
-const mainAudio = wrapper.querySelector("#main-audio")
+const mainAudio = document.querySelector("#main-audio")
 const progressArea = wrapper.querySelector(".progress-area")
 const progressBar = progressArea.querySelector(".progress-bar")
-
+console.log(mainAudio)
 let musicIndex = Math.floor(Math.random() * allMusic.length + 1)
-// const isMusicPaused = true
+// const isMusicPaused = true;
 
 window.addEventListener("load", () => {
   loadMusic(musicIndex)
 
   function loadMusic(indexNumb) {
-    musicName.innerText = allMusic[indexNumb - 1].song
+    musicName.innerText = allMusic[indexNumb - 1].nameVideo
     musicArtist.innerText = allMusic[indexNumb - 1].artist
     musicImg.src = `/video/${allMusic[indexNumb - 1].video}.mp4`
     // musicImg.src = `assets/cover/${allMusic[indexNumb -1 ].img}.jpg`;
-    // mainAudio.src = `/music/${allMusic[indexNumb - 1].src}.mp3`
+    mainAudio.src = `/video/${allMusic[indexNumb - 1].video}.mp4`
   }
 
   function playMusic() {
     wrapper.classList.add("paused")
-    musicImg.classList.add("rotate")
+    // musicImg.classList.add("rotate")
     playPauseBtn.innerHTML = `<img src="public/pause-line.svg" alt="Play" srcset="">`
-    // mainAudio.play()
+
     musicImg.play()
+    mainAudio.play()
   }
 
   function pauseMusic() {
@@ -63,7 +64,7 @@ window.addEventListener("load", () => {
     musicImg.classList.remove("rotate")
     // playPauseBtn.innerHTML = `<img src="assets/img/play-fill.svg" alt="Play" srcset="">`
     playPauseBtn.innerHTML = `<img src="public/play-fill.svg" alt="Play" >`
-    // mainAudio.pause()
+    mainAudio.pause()
     musicImg.pause()
   }
 
@@ -102,6 +103,7 @@ window.addEventListener("load", () => {
 
     let musicCurrentTime = wrapper.querySelector(".current-timer"),
       musicDuration = wrapper.querySelector(".max-duration")
+
     mainAudio.addEventListener("loadeddata", () => {
       let mainAdDuration = mainAudio.duration
       let totalMin = Math.floor(mainAdDuration / 60)
@@ -140,16 +142,14 @@ window.addEventListener("load", () => {
   const area = document.getElementById("visualiser")
   // const label = document.getElementById("label")
 
-  // area.addEventListener("click", () => {
-  //   console.log(mainAudio)
-  //   if (mainAudio.paused) {
-  //     mainAudio.play()
-  //     // label.style.display = "none"
-  //   } else {
-  //     mainAudio.pause()
-  //     // label.style.display = "flex"
-  //   }
-  // })
+  area.addEventListener("click", () => {
+    console.log(mainAudio)
+    if (mainAudio.paused) {
+      mainAudio.play()
+    } else {
+      mainAudio.pause()
+    }
+  })
 
   startVis()
 

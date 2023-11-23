@@ -115,6 +115,18 @@ nav.dropdown-active .menu-icon .line-1 {
   transition: ease-in 0.3s;
 }
 
+.line-1-list {
+  margin-top: 0px;
+  transform: rotateZ(45deg);
+  transition: ease-in 0.3s;
+}
+
+.line-2-list {
+  margin-top: -12px;
+  transform: rotateZ(-45deg);
+  transition: ease-in 0.3s;
+}
+
 nav.dropdown-active .menu-icon .line-2 {
   margin-top: -12px;
   transform: rotateZ(-45deg);
@@ -158,9 +170,9 @@ nav.dropdown-active .menu-icon .line-2 {
   height: 10px;
 }
 
-.button-tiktok:active,
-.button-instagram:active,
-.button-youtube:active {
+.button-tiktok.active,
+.button-instagram.active,
+.button-youtube.active {
   box-shadow: var(--boxShadowButtonsMediasSocialPink);
   background: var(--mainColorGreen);
   border: 2px solid var(--colorBorderPink);
@@ -186,4 +198,16 @@ li.label-controls {
 }
 .itens-menu span {
   color: var(--colorWhite);
+}
+
+li.label-li {
+  box-shadow: none;
+  word-wrap: break-word;
+}
+
+
+
+.label.controls-dropdown-lables {
+  margin: 0px;
+  
 }

@@ -2,16 +2,27 @@ import "./themeToggle.js"
 import "./controlToggle.js"
 import "./timerToggle.js"
 import "./aniamtionToggle.js"
-// import "./showListSongs.js"
+import "./rotationToggle.js"
+import "./lableToogle.js"
+import "./btShorts.js"
+import "./btInstagram.js"
+import "./btTiktok.js"
+import "./form.js"
 
 import { toogleMenu } from "./dropmenu.js"
 window.toogleMenu = toogleMenu
+
+import { newVideo } from "./newVideoToggle.js"
+window.newVideo = newVideo
 
 import { toogleListSong } from "./listSongToggle.js"
 window.toogleListSong = toogleListSong
 
 import { toogleLirycs } from "./lirycsToggle.js"
 window.toogleLirycs = toogleLirycs
+
+import { chooseLables } from "./ControlsIconLables.js"
+window.chooseLables = chooseLables
 
 import {} from "./player.js"
 

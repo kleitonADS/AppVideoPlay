@@ -49,11 +49,28 @@ nav h1 {
   background: var(--colorWhite);
   transition: ease-in 0.3s;
 }
+
+.line-1-list,
+.line-2-list{
+  height: 2px;
+  width: 100%;
+  background: var(--colorWhite);
+  transition: ease-in 0.3s;
+}
 .menu-icon:hover .line-1 {
   background: var(--mainColorGreen);
 }
 
 .menu-icon:hover .line-2 {
+  background: var(--mainColorGreen);
+}
+
+
+.menu-icon:hover .line-1-list {
+  background: var(--mainColorGreen);
+}
+
+.menu-icon:hover .line-2-list {
   background: var(--mainColorGreen);
 }
 
