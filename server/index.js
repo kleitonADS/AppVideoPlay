@@ -45,6 +45,9 @@ app.post(
   }
 ),
   app.get("/deleteVideo", async function (req, res) {
+
+
+    console.log(req.query)
     console.log('aquii delete')
     // try {
     //   return res.json({ message: "Successfully uploaded files" })

@@ -1,28 +1,5 @@
 import { allMusic } from "./music-list.js"
 
-const ul = document.querySelector(".list-all-songs")
-
-for (let i = 0; i < allMusic.length; i++) {
-  const video = allMusic[i]
-  const li = document.createElement("li")
-  li.innerHTML = `<div class="content-img-cover">
-        <img src="./covers/${video.cover}" alt="cover-video" >
-       </div>
-       <div class="content-title">
-        <h1>${video.nameVideo}</h1>
-        <h2>${video.artist}</h2>
-       </div>
-       <div class="content-bt-play">
-        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo})">
-        <img src="./file-edit-line.svg" alt="play list video" >
-       </button>
-       </div>
-       <div class="content-bt-delete">
-         <button class="bt-delete" type="button" onClick="deleteVideo(${video.nameVideo})"><img src="./deletebin.svg" alt="play list video"  ></button>
-       </div>`
-
-  ul.appendChild(li)
-}
 
 // Const
 const wrapper = document.querySelector(".wrapper-play")
@@ -38,6 +15,32 @@ const progressBar = progressArea.querySelector(".progress-bar")
 console.log(mainAudio)
 let musicIndex = Math.floor(Math.random() * allMusic.length + 1)
 // const isMusicPaused = true;
+
+
+const ul = document.querySelector(".list-all-songs")
+
+for (let i = 0; i < allMusic.length; i++) {
+  const video = allMusic[i]
+  const li = document.createElement("li")
+  li.innerHTML = `<div class="content-img-cover">
+        <img src="./covers/${video.cover}" alt="cover-video" >
+       </div>
+       <div class="content-title">
+        <h1>${video.nameVideo}</h1>
+        <h2>${video.artist}</h2>
+       </div>
+       <div class="content-bt-play">
+        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo});">
+        <img src="./file-edit-line.svg" alt="play list video" >
+       </button>
+       </div>
+       <div class="content-bt-delete">
+         <button class="bt-delete" type="button" onClick="deleteVideo('${video.nameVideo}','${video.artist}')"><img src="./deletebin.svg" alt="play list video"  ></button>
+       </div>`
+
+  ul.appendChild(li);
+};
+
 
 window.addEventListener("load", () => {
   loadMusic(musicIndex)
