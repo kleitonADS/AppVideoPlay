@@ -1,6 +1,5 @@
 import { allMusic } from "./music-list.js"
 
-
 // Const
 const wrapper = document.querySelector(".wrapper-play")
 const musicImg = wrapper.querySelector(".img-cover")
@@ -12,10 +11,8 @@ const nextBtn = wrapper.querySelector("#next")
 const mainAudio = document.querySelector("#main-audio")
 const progressArea = wrapper.querySelector(".progress-area")
 const progressBar = progressArea.querySelector(".progress-bar")
-console.log(mainAudio)
-let musicIndex = Math.floor(Math.random() * allMusic.length + 1)
-// const isMusicPaused = true;
 
+let musicIndex = Math.floor(Math.random() * allMusic.length + 1)
 
 const ul = document.querySelector(".list-all-songs")
 
@@ -29,18 +26,41 @@ for (let i = 0; i < allMusic.length; i++) {
         <h1>${video.nameVideo}</h1>
         <h2>${video.artist}</h2>
        </div>
-       <div class="content-bt-play">
-        <button class="bt-play" type="button" onClick="EditVideo(${video.nameVideo});">
-        <img src="./file-edit-line.svg" alt="play list video" >
-       </button>
-       </div>
+      
        <div class="content-bt-delete">
-         <button class="bt-delete" type="button" onClick="deleteVideo('${video.nameVideo}','${video.artist}')"><img src="./deletebin.svg" alt="play list video"  ></button>
+         <button class="bt-delete" type="button" onClick="deleteVideo('${video.nameVideo}','${video.video}')"><img src="./deletebin.svg" alt="play list video"  ></button>
+         <span class="video-names">${video.video}<span>
        </div>`
 
-  ul.appendChild(li);
-};
+  ul.appendChild(li)
+  
+}
 
+const currentUrl = window.location.search
+console.log(currentUrl)
+const msmContainer = document.querySelector(".message-top h1")
+
+switch (currentUrl) {
+  case "?videoAdd":
+    msmContainer.innerHTML = "video added successfully"
+    break
+
+  case "?ErrorAdd":
+    msmContainer.innerHTML = "Error Add the Video"
+    break
+
+  case "?videoDeleted":
+    msmContainer.innerHTML = "video deleted"
+    break
+
+  case "?ErrorDelete":
+    msmContainer.innerHTML = "Error delete Video"
+    break
+
+  default:
+    msmContainer.innerHTML = ""
+    break
+}
 
 window.addEventListener("load", () => {
   loadMusic(musicIndex)
@@ -49,13 +69,37 @@ window.addEventListener("load", () => {
     musicName.innerText = allMusic[indexNumb - 1].nameVideo
     musicArtist.innerText = allMusic[indexNumb - 1].artist
     musicImg.src = `/video/${allMusic[indexNumb - 1].video}.mp4`
-    // musicImg.src = `assets/cover/${allMusic[indexNumb -1 ].img}.jpg`;
     mainAudio.src = `/video/${allMusic[indexNumb - 1].video}.mp4`
+
+    const videoPlayng = mainAudio.src.replace(
+      "http://localhost:5173/video/",
+      ""
+    )
+
+    const videoPlayngClear = videoPlayng.replace(".mp4", "")
+
+    const videos = document.querySelectorAll(".video-names")
+    videos.forEach(function (element) {
+      const getVideoName = element.innerText
+
+      if (getVideoName === videoPlayngClear) {
+        element.classList.add("playng")
+        element.parentElement.parentElement.style.backgroundColor = "#b0bd00"
+         element.parentElement.parentElement.classList.add("song-active")
+      } else {
+        element.classList.remove("playng")
+        element.parentElement.parentElement.style.backgroundColor = ""
+         element.parentElement.parentElement.classList.remove("song-active")
+      }
+    })
   }
+
+
+  
+
 
   function playMusic() {
     wrapper.classList.add("paused")
-    // musicImg.classList.add("rotate")
     playPauseBtn.innerHTML = `<img src="public/pause-line.svg" alt="Play" srcset="">`
 
     musicImg.play()
@@ -64,12 +108,12 @@ window.addEventListener("load", () => {
 
   function pauseMusic() {
     wrapper.classList.remove("paused")
-    musicImg.classList.remove("rotate")
-    // playPauseBtn.innerHTML = `<img src="assets/img/play-fill.svg" alt="Play" srcset="">`
     playPauseBtn.innerHTML = `<img src="public/play-fill.svg" alt="Play" >`
     mainAudio.pause()
     musicImg.pause()
   }
+
+  
 
   function prevMusic() {
     musicIndex--
@@ -130,7 +174,7 @@ window.addEventListener("load", () => {
     let progressWidth = progressArea.clientWidth
     let clickedOffSetX = e.offsetX
     let songDuration = mainAudio.duration
-
+    
     mainAudio.currentTime = (clickedOffSetX / progressWidth) * songDuration
     playMusic()
   })
@@ -143,7 +187,6 @@ window.addEventListener("load", () => {
 
   let noise = new SimplexNoise()
   const area = document.getElementById("visualiser")
-  // const label = document.getElementById("label")
 
   area.addEventListener("click", () => {
     console.log(mainAudio)

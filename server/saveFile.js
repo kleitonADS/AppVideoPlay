@@ -1,9 +1,9 @@
 import fs from "fs"
 import { allMusic } from "../web/music-list.js"
 
-
-export const savefile = (data, files) =>
-  new Promise((resolve, reject) => {
+export async function saveFile(data, files) {
+  console.log("Salvando o video...")
+  try {
     const VideoName = files["Video"][0].filename.replace(".mp4", "")
 
     const inputObj = {
@@ -12,14 +12,16 @@ export const savefile = (data, files) =>
       cover: files["cover"][0].filename,
       video: VideoName,
     }
-    
 
     allMusic.push(inputObj)
     const info = JSON.stringify(allMusic)
     fs.writeFileSync(
       "web/music-list.js",
-      `export let allMusic = ${info}`,null,2
+      `export let allMusic = ${info}`,
+      null,
+      2
     )
-
-   
-  })
+  } catch (error) {
+    throw new Error(error)
+  }
+}
