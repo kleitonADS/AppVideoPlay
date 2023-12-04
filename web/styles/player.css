@@ -27,10 +27,7 @@
   flex-direction: row;
   padding: 8px 20px 0px 20px;
   border-radius: 50px;
-  /* border: 2px solid white; */
   margin-top: -39rem;
-  /* margin-top: 2rem; */
-  /* box-shadow: var(--boxShadowButtonHeaderPink); */
 }
 
 .shorts-top.active {
@@ -88,7 +85,6 @@
   border: 4px solid var(--colorBorderPink);
   background: var(--mainColorPink);
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-
   z-index: 100;
 }
 
@@ -127,8 +123,8 @@
   max-width: 310px;
   border-radius: 20px;
   padding: 1rem;
-
-  margin-left: -25px;
+  margin-left: auto;
+  margin-right: auto;
   background: #e31ee6;
   box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
   opacity: 0;
@@ -164,6 +160,7 @@
 .song-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .song-details .name {
@@ -231,7 +228,6 @@
   margin-left: 25px;
   margin-right: auto;
   position: absolute;
-  /* object-fit: cover; */
   margin-top: -51px;
 }
 
@@ -331,9 +327,7 @@
   background: #e31ee6;
 }
 
-.button-header:active {
-  box-shadow: 15px 15px 45px #8d138f, -15px -15px 45px #ff29ff;
-}
+
 
 .button-header-player {
   box-shadow: 15px 15px 45px #8d138f, -15px -15px 45px #ff29ff;
@@ -368,11 +362,6 @@
 #visualiser.off {
   display: none;
 }
-
-/* .checkbox:checked + .label .ball {
-  transform: translateX(20px);
-  background-color: #b0bd00;
-} */
 
 video::-webkit-media-controls {
   display: none;

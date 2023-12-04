@@ -1,6 +1,5 @@
 /* DropdownNavBar */
 .dropdown-menu {
-  /* width: 100%; */
   width: 50%;
   height: 170px;
   margin-top: 1rem;
@@ -13,15 +12,12 @@
   display: none;
   padding-bottom: 2rem;
   z-index: 1000;
-
-  /* transition: box-shadow ease-in-out 0.2s; */
 }
 
 .title-dropdrow {
   display: flex;
   padding: 1rem;
   align-items: center;
-  /* color: var(--colorWhite); */
 }
 
 .title-dropdrow span.icon-settings {
@@ -204,8 +200,6 @@ li.label-li {
   box-shadow: none;
   word-wrap: break-word;
 }
-
-
 
 .label.controls-dropdown-lables {
   margin: 0px;

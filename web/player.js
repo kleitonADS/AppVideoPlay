@@ -84,11 +84,11 @@ window.addEventListener("load", () => {
 
       if (getVideoName === videoPlayngClear) {
         element.classList.add("playng")
-        element.parentElement.parentElement.style.backgroundColor = "#b0bd00"
+        element.parentElement.parentElement.style.border = "1px solid #fff"
          element.parentElement.parentElement.classList.add("song-active")
       } else {
         element.classList.remove("playng")
-        element.parentElement.parentElement.style.backgroundColor = ""
+        element.parentElement.parentElement.style.border = ""
          element.parentElement.parentElement.classList.remove("song-active")
       }
     })
@@ -170,12 +170,46 @@ window.addEventListener("load", () => {
     musicCurrentTime.innerText = `${currentMin}:${currentSec}`
   })
 
+
+  musicImg.addEventListener("timeupdate", (e) => {
+    const currentTime = e.target.currentTime
+    const duration = e.target.duration
+    let progressWidth = (currentTime / duration) * 100
+    progressBar.style.width = `${progressWidth}%`
+
+    let musicCurrentTime = wrapper.querySelector(".current-timer"),
+      musicDuration = wrapper.querySelector(".max-duration")
+
+    musicImg.addEventListener("loadeddata", () => {
+      let mainAdDuration = mainAudio.duration
+      let totalMin = Math.floor(mainAdDuration / 60)
+      let totalSec = Math.floor(mainAdDuration % 60)
+      if (totalSec < 10) {
+        totalSec = `0${totalSec}`
+      }
+      musicDuration.innerText = `${totalMin}:${totalSec}`
+    })
+
+    let currentMin = Math.floor(currentTime / 60)
+    let currentSec = Math.floor(currentTime % 60)
+
+    if (currentSec < 10) {
+      currentSec = `0${currentSec}`
+    }
+    musicCurrentTime.innerText = `${currentMin}:${currentSec}`
+  })
+
+
+
   progressArea.addEventListener("click", (e) => {
     let progressWidth = progressArea.clientWidth
-    let clickedOffSetX = e.offsetX
+    let clickedOffSetX = e.offsetX  
     let songDuration = mainAudio.duration
+    let songDurationv = musicImg.duration
     
     mainAudio.currentTime = (clickedOffSetX / progressWidth) * songDuration
+
+    musicImg.currentTime = (clickedOffSetX / progressWidth) * songDurationv
     playMusic()
   })
 

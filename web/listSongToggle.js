@@ -15,11 +15,11 @@ export function toogleListSong() {
 
     if (getVideoName === videoPlayngClear) {
       element.classList.add("playng")
-      element.parentElement.parentElement.style.backgroundColor = "#b0bd00"
+      element.parentElement.parentElement.style.border = "1px solid #fff"
       element.parentElement.parentElement.classList.add('song-active')
     } else {
       element.classList.remove("playng")
-      element.parentElement.parentElement.style.backgroundColor = ""
+      element.parentElement.parentElement.style.border = ""
       element.parentElement.parentElement.classList.remove("song-active")
     }
   })

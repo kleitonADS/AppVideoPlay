@@ -2,7 +2,6 @@
   display: flex;
   width: 50px;
   height: 50px;
-  /* border-radius: 20%; */
   object-fit: cover;
 }
 
@@ -23,22 +22,25 @@
 }
 
 .list-all-songs {
-  display: flex;
-      width: 100%;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
   padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 665px;
+}
+
+.list-all-songs::-webkit-scrollbar {
+  background-color: transparent;
 }
 
 .button-new-video {
   display: flex;
-  width: 70%;
-  margin-left: 1rem;
+  width: 180px;
   color: var(--colorWhite);
   padding: 0.5rem;
   background-color: var(--mainColorPink);
   border: 3px solid var(--mainColorGreen);
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   justify-content: space-around;
   align-items: center;
@@ -47,21 +49,21 @@
 
 .button-new-video:hover {
   background-color: var(--mainColorGreen);
-  border: 3px solid var(--colorWhite);
+  border: 3px solid var(--mainColorPink);
+  color: var(--colorWhite);
 }
 
 .list-all-songs li {
   display: flex;
   height: auto;
   flex-direction: row;
-  border: 2px solid var(--borderColorPink);
-  border-radius: 5px;
+  border: 4px solid var(--mainColorPink);
+  border-radius: 10px;
   padding: 1rem;
   align-items: center;
   margin-bottom: 1rem;
   justify-content: space-between;
-     box-shadow: 14px 14px 28px #c11ac4, -8px -6px 28px #ff23ff;
-
+  box-shadow: 14px 14px 28px #c11ac4, -8px -6px 28px #ff23ff;
 }
 
 .content-title h1,
@@ -71,18 +73,19 @@ h2 {
   color: var(--colorWhite);
 }
 
-.bt-play {
+label.custom-file-upload {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  color: var(--colorWhite);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid var(--colorWhite);
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: space-around;
   align-items: center;
-  width: 35px;
-  height: 35px;
-  border: 3px solid #b0bd00;
-  border-radius: 50%;
-  /* background: linear-gradient(145deg, #bcca00, #9eaa00); */
-  background: transparent;
-  box-shadow: 16px 16px 32px #c11ac4, -16px -16px 32px #ff23ff;
-  transform: all 0.3s ease;
+  background: var(--mainColorPink);
+  box-shadow: 10px 8px 28px #c11ac4, -10px -8px 28px #ff23ff;
 }
 
 .bt-delete {
@@ -100,7 +103,7 @@ h2 {
 }
 
 .bt-delete:hover {
-  background:var(--mainColorGreen)
+  background: var(--mainColorGreen);
 }
 
 .new-file-content {
@@ -116,7 +119,6 @@ h2 {
   justify-content: center;
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
   transition: all 0.2s ease;
-
 }
 
 .content-inputs-form {
@@ -136,21 +138,16 @@ h2 {
 .content-inputs-form input {
   display: flex;
   width: 100%;
-  /* margin-left: 1rem; */
   color: var(--colorWhite);
   padding: 0.5rem;
   margin-top: 1rem;
-  /* background-color: var(--mainColorPink); */
-  border: 2px solid var(--mainColorGreen);
-  border-radius: 20px;
+  border: 2px solid var(--colorWhite);
+  border-radius: 10px;
   cursor: pointer;
   justify-content: space-around;
   align-items: center;
   background: var(--mainColorPink);
-  /* box-shadow: inset 20px 20px 60px #c11ac4, inset -20px -20px 60px #ff23ff; */
-  background: linear-gradient(145deg, #cc1bcf, #f320f6);
-  /* box-shadow:  35px 35px 70px #c11ac4,
-             -35px -35px 70px #ff23ff; */
+  box-shadow: 10px 8px 28px #c11ac4, -10px -8px 28px #ff23ff;
 }
 .content-inputs-form input::placeholder {
   color: var(--colorWhite);
@@ -165,12 +162,17 @@ h2 {
   color: var(--colorWhite);
   padding: 0.5rem;
   background-color: var(--mainColorGreen);
-  border: 3px solid var(--mainColorGreen);
-  border-radius: 20px;
+  border: 3px solid var(--mainColorPink);
+  border-radius: 10px;
   cursor: pointer;
   justify-content: space-around;
   align-items: center;
   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+}
+
+.bt-send:hover {
+  background: var(--colorWhite);
+  color: #ff23ff;
 }
 
 .inputFiles[type="file"] {
@@ -182,6 +184,7 @@ h2 {
   cursor: pointer;
   border-radius: 0;
   margin: 0;
+  height: 0;
 }
 
 .custom-file-upload {
@@ -192,45 +195,29 @@ h2 {
   font-size: 1rem;
 }
 
-.new-file-content.active{
+.new-file-content.active {
   display: flex;
-  
 }
-
-/* .inputFiles::file-selector-button {
-  font-weight: bold;
-  color: dodgerblue;
-  padding: 0.5em;
-  border: thin solid grey;
-  border-radius: 3px;
-} */
-/* 
-.inputFiles{
-  border: 0;
-} */
 
 .inputFiles[type="file"]::file-selector-button {
   display: flex;
   width: 100%;
-  /* margin-right: 20px; */
   border: none;
-  background: #084cdf;
+  background: var(--mainColorPink);
   padding: 10px 20px;
   border-radius: 10px;
+  border: 2px solid var(--colorWhite);
   color: #fff;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }
 
 .inputFiles[type="file"]::file-selector-button:hover {
-  background: #0d45a5;
+  background: var(--mainColorGreen);
 }
 
-
-.list-all-songs.list-none{
-   /* height: 150px; */
+.list-all-songs.list-none {
   display: none;
-  /* overflow-y: scroll; */
 }
 
 .video-names {
@@ -240,11 +227,18 @@ h2 {
 }
 
 .song-active .content-bt-delete .bt-delete {
-      border: 3px solid var(--mainColorPink);
-      box-shadow:  16px 16px 32px #96a100,
-             -16px -16px 32px #cad900;
+  border: 3px solid var(--colorWhite);
 }
 
-.song-active .content-bt-delete .bt-delete:hover{
-  background: var(--mainColorPink);
+.song-active .content-bt-delete .bt-delete:hover {
+  background: var(--mainColorGreen);
+  border: 0;
+}
+
+
+.content-button-new-video {
+  display: flex;
+  justify-content:flex-start;
+  padding: 1rem;
+
 }
